@@ -25,6 +25,7 @@ import { createContext, useContext,useMemo ,  useCallback,useEffect, useState,us
      const filteredRoom=useMemo(()=>{return room.filter((r)=>{
         const {city,guest}=search
         console.log({city,guest});
+        console.log( r.city===city,r.city.includes(city),typeof(city),typeof(r.city))
         return r.maxGuests<=guest && r.city.includes(city)
      })},[room,search]);
      console.log("filteredRoom",filteredRoom);

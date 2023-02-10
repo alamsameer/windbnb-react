@@ -82,8 +82,8 @@ function MobileHeader({ className, setSearchBox, guestCounter, setGuestCounter, 
               true && <>
                 <button className='block w-full mb-2'>Helsinki,Finland</button>
                 <button className='block w-full mb-2'>Turku,Finland</button>
-                <button className='block w-full mb-2'>Vassa,Finland</button>
-                <button className='block w-full mb-2'>oulu,Finland</button>
+                <button className='block w-full mb-2'>Vaasa,Finland</button>
+                <button className='block w-full mb-2'>Oulu,Finland</button>
               </>
             }
           </div>
