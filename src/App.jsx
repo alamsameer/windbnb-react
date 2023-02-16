@@ -14,12 +14,10 @@ function Navbar() {
   const className = issearchBox ? 'scale-0 opacity-0 z-[-9999]' : 'scale-100'
   // handling the visibilty of the search box
   const handleSearchBox = (e) => {
-    console.log(e);
     if (searchBoxRef.current == e.target.parentElement) {
       setSearchBox(!issearchBox)
     }
   }
-  console.log(issearchBox);
   return (
     <div>
       {/* logo */}
@@ -55,7 +53,6 @@ function MobileHeader({ className, setSearchBox, guestCounter, setGuestCounter, 
   const locationRef = useRef(null)
   const { setSearch } = useRoom()
   const locationselected = (e) => {
-    console.log(locationRef.current == e.target.parentElement)
     if (locationRef.current == e.target.parentElement) {
       setSelectedLocation(e.target.textContent)
     }
@@ -115,7 +112,6 @@ function MobileHeader({ className, setSearchBox, guestCounter, setGuestCounter, 
           <button id='searchroom' onClick={() => {
             let location = locationSelected.split(',')
             let city = location[0]
-            console.log(city);
             setSearch({
               city,
               guest: guestCounter
@@ -154,7 +150,6 @@ function Room({ room }) {
 }
 function RoomList() {
   const { room } = useRoom()
-  console.log(room);
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
       {
